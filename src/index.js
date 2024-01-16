@@ -1,4 +1,5 @@
 import "../css/style.css";
+import "../css/zero_styles.css";
 
 const images = [
   {
