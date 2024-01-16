@@ -1,1 +1,1 @@
-console.log("Hello World!");
+(()=>{"use strict";var e=[{url:"../images/banner_first_slide.jpg"},{url:"../images/banner_second_slide.jpg"},{url:"../images/banner_third_slide.jpg"}];!function(){for(var r=0;r<e.length;r++){document.querySelector(".slider_line").innerHTML+='<img src="'.concat(e[r].url,'" alt="slider_image" />');var i=document.createElement("div");i.classList.add("dots");var n=document.querySelector(".main_dots_block");n+=n.appendChild(i)}}()})();
