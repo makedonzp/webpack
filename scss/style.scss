@@ -101,12 +101,16 @@ body {
   position: relative;
   & .container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     position: relative;
     width: 1120px;
+    height: 737px;
+    margin-bottom: 50px;
+    transition: transform;
     .main_change_old_book {
+      z-index: 10;
       position: absolute;
       right: -86px;
       top: 79px;
@@ -126,6 +130,7 @@ body {
       }
     }
     .main_top_100_books_block {
+      z-index: 10;
       position: absolute;
       background-color: #ff8fe6;
       right: -160px;
@@ -146,16 +151,33 @@ body {
     }
   }
 }
-.slider_line {
-  display: flex;
-  align-items: center;
+.main_slider_block {
   overflow: hidden;
-  & img {
-    width: 100%;
-    height: 702px;
+}
+
+.slider {
+  max-width: 1120px;
+  overflow: hidden;
+  height: 702px;
+  position: relative;
+  transition: all 0.7s;
+  .slider_line {
+    width: 3360px;
+    left: 0;
+    top: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    // & img {
+    // }
   }
 }
+
 .main_dots_block {
+  position: absolute;
+  bottom: 0;
+  left: 46%;
   display: flex;
   gap: 10px;
   margin-top: 17px;
@@ -165,8 +187,9 @@ body {
     width: 12px;
     background-color: #efeef6;
     cursor: pointer;
-    & .active {
-      background-color: #9e98dc;
-    }
+  }
+  & .active_dot,
+  :hover {
+    background-color: #9e98dc;
   }
 }
